@@ -1,20 +1,15 @@
-import { loadBundle ,NOT_LOADED } from "./app.helper";
+import { NOT_LOADED } from "./app.helper";
+import { appQueue } from "./queus";
+import { invoke } from "./../navigation/invoke";
+import { AppOption } from "./../type/index";
 
-interface AppOption {
-   appName:string;
-   loadUrl: string;
-   activeWhen: Function;
-   customProps: Object;
-   status?: string;
-}
 const APPS = [];
 
+export function registerApplication(App: AppOption) {
+  // 不校验
+  App.status = NOT_LOADED;
 
-export function registerApplication(option: AppOption) {
-    // 不校验
-    option.status = NOT_LOADED;
+  appQueue.push(App);
 
-    APPS.push(option);
-    
-
+  return invoke();
 }
