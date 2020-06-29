@@ -3,7 +3,8 @@ module.exports = function (api) {
 
   return {
     presets: [
-      ['@babel/preset-env', { modules: false }]
+      ['@babel/preset-env', { modules: false }],
+      "@babel/preset-typescript"
     ],
     plugins: [
       '@babel/plugin-syntax-dynamic-import'

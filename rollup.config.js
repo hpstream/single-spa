@@ -1,19 +1,14 @@
-import nodeResolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
-import commonjs from 'rollup-plugin-commonjs';
-import serve from 'rollup-plugin-serve'
-
-export default {
-  input: './single-spa/src/my-single-spa.js',
+import { rollupGenerator } from '@nosaid/rollup';
+import babel from 'rollup-plugin-babel'
+export default rollupGenerator([{
+  input: './spa-source/src/my-single-spa.ts',
   output: {
-    file: './single-spa/lib/my-single-spa.js',
+    file: './spa-source/lib/my-single-spa.js',
     format: 'umd',
     name: 'mySingleSpa',
     sourcemap: true
   },
   plugins: [
-    nodeResolve(),
-    commonjs(),
     babel({
       exclude: 'node_modules/**'
     }),
@@ -25,4 +20,4 @@ export default {
       port: 10001
     }) : null
   ]
-}
+}])
