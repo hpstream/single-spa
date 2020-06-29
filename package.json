@@ -1,0 +1,30 @@
+{
+  "name": "single-spa",
+  "version": "1.0.0",
+  "description": "微前端研究",
+  "main": "index.js",
+  "scripts": {
+    "single-spa:build": "rollup -c",
+    "single-spa:watch": "SERVE=true rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hpstream/single-spa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hpstream/single-spa/issues"
+  },
+  "homepage": "https://github.com/hpstream/single-spa#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.10.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.0.1"
+  }
+}
