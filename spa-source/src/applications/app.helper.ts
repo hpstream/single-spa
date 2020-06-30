@@ -33,7 +33,9 @@ export function isMounting(app: AppOption) {
 export function isUnmounted(app: AppOption) {
   return app.status === UNMOUNTING;
 }
-
+export function isNotBootstrapped(app: AppOption) {
+  return app.status === "NOT_BOOTSTRAPPED";
+}
 export function isActive(app: AppOption) {
   try {
     return app.activeWhen(window.location);

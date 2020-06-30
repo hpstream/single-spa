@@ -4,7 +4,7 @@ export function toMountPromise(app) {
   app.status = MOUNTING;
 
   try {
-    return app.mount();
+    return app.mount(app);
   } catch (e) {
     console.log(e);
     app.status = SKIP_BECAUSE_BROKEN;

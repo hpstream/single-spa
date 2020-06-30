@@ -1,3 +1,4 @@
+import { AppOption } from "./../type/index";
 export declare const NOT_LOADED = "NOT_LOADED";
 export declare const LOAD_RESOURCE_CODE = "LOAD_RESOURCE_CODE";
 export declare const NOT_BOOTSTRAPPED = "NOT_BOOTSTRAPPED";
@@ -9,4 +10,9 @@ export declare const UNMOUNTING = "UNMOUNTING";
 export declare const SKIP_BECAUSE_BROKEN = "SKIP_BECAUSE_BROKEN";
 export declare const LOAD_ERROR = "LOAD_ERROR";
 export declare const UPDATING = "UPDATING";
-export declare function loadBundle(url: string): Promise<unknown>;
+export declare function isNotLoaded(app: AppOption): boolean;
+export declare function isMounting(app: AppOption): boolean;
+export declare function isUnmounted(app: AppOption): boolean;
+export declare function isNotBootstrapped(app: AppOption): boolean;
+export declare function isActive(app: AppOption): any;
+export declare function shouldnotBeActive(app: AppOption): boolean;

@@ -25,6 +25,7 @@
     "@babel/preset-typescript": "^7.10.1",
     "@nosaid/rollup": "^0.0.17",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-serve": "^1.0.1",
     "typescript": "^3.9.5"
   }
 }

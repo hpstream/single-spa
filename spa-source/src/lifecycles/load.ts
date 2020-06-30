@@ -21,8 +21,10 @@ export function loadBundle(app: AppOption) {
     var script = document.createElement("script");
     script.src = app.loadUrl;
     app.status = LOAD_RESOURCE_CODE;
+    document.head.appendChild(script);
     script.onload = (e) => {
       // app.status = NOT_BOOTSTRAPPED;
+      console.log(window[app.appName]);
       reslove(window[app.appName]);
     };
     script.onerror = (e) => {

@@ -1,4 +1,5 @@
 import { rollupGenerator } from '@nosaid/rollup';
+import serve from 'rollup-plugin-serve'
 import babel from 'rollup-plugin-babel'
 export default rollupGenerator([{
   input: './spa-source/src/my-single-spa.ts',
@@ -14,8 +15,8 @@ export default rollupGenerator([{
     }),
     process.env.SERVE ? serve({
       open: true,
-      contentBase: '',
-      openPage: './single-spa/test/quick/index.html',
+      contentBase: './',
+      openPage: '/',
       host: 'localhost',
       port: 10001
     }) : null

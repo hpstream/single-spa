@@ -6,12 +6,17 @@ import {
   isUnmounted,
   shouldnotBeActive,
   isMounting,
+  isNotBootstrapped,
 } from "./app.helper";
 
 export const appQueue: AppOption[] = [];
 
 export function getAppsToLoad() {
   return appQueue.filter(isNotLoaded).filter(isActive);
+}
+
+export function getAppsToNotBootstrapped() {
+  return appQueue.filter(isNotBootstrapped).filter(isActive);
 }
 
 export function getAppsToUnmount() {
