@@ -4,7 +4,7 @@ import App from './App.vue'
 Vue.config.productionTip = false
 
 
-
+console.log(1)
 
 export function bootstrap() {
   this.$root = new Vue({
