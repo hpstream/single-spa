@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to children sub-app-vue1"/>
+    <HelloWorld msg="sub-app-vue1"/>
   </div>
 </template>
 

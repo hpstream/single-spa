@@ -6,10 +6,12 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib":"vue-cli-service build --target lib --inline-vue"
+    "lib": "vue-cli-service build --target lib --inline-vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "single-spa-vue": "^1.5.2",
+    "systemjs-webpack-interop": "^1.1.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -19,6 +21,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "vue-cli-plugin-single-spa": "^1.1.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
